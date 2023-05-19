@@ -1,2 +1,2 @@
-# personal-dashboard
-Rick's Personal Dashboard
+# personal-website
+Rick's Website
