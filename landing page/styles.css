@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3em;
+}
+
+.navicons{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+
+}
+
+.button button{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 0.7rem 1rem;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 0.5rem;
+    background-color: transparent;
+}
+
+.button button:hover{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 0.7rem 1rem;
+    color: white;
+    border-color: transparent;
+    border-radius: 0.5rem;
+    background-color: black;
+    transition: 0.4s
+}
+
+.title{
+    font-size: clamp(2.7rem, 4.5vw, 4rem);
+}
+
+.nav{
+    display: flex;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding-left: clamp(0.7rem, 1.5vw, 3rem);
+}
+
+.nav:first-child {
+    padding-left: 0px;
+}
+
+.mode{
+
+}
+
+.nav:last-child{
+    display: none;
+    visibility: hidden;
+}
+
+.resume{
+    text-align: center;
+}
+
+.test{
+    margin-top: 1000px;
+}
+
+@media screen and (max-width: 750px) {
+    li:not(.button){
+        display: none;
+        visibility: hidden;
+    }
+    .nav:last-child{
+        display: inline;
+        visibility: visible;
+    }
+    .navbar{
+        justify-content: space-between;
+        padding: 2rem 2rem;
+    }
+    
+}
