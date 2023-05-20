@@ -6,17 +6,26 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.text{
+    margin-bottom: 10px;
+}
 
 .page{
     display: flex;
     flex-flow: column;
+    padding: 0 3rem 0 3rem;
 }
 
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3em;
+    padding: 2rem 3rem;
 }
 
 .underline {
@@ -118,6 +127,7 @@ button:active{
     justify-content: center;
     align-items: center;
     height: calc(80vh - 105px);
+    margin-bottom: 275px;
 }
 
 .socialbubs{
@@ -168,10 +178,39 @@ a:active{
     font-size: 50px;
 }
 
-
 .about{
-padding: 1000px;
+    display: flex;
+    padding-top: 25px;
+    align-items: center;
+    justify-content: center;
 }
+
+.about img{
+    width: 50%;
+    max-height: 400px;
+}
+
+
+.abouttext{
+    display: flex;
+    flex-flow: column;
+    margin-right: 5%;
+    align-self: flex-start;
+}
+
+.skills{
+    display: none;
+    visibility: hidden;
+}
+
+
+
+
+
+.portfolio{
+    padding: 1000px;
+}
+
 
 @media screen and (max-width: 700px) {
     li:not(.button){
@@ -193,4 +232,40 @@ padding: 1000px;
         padding: 0.5rem 0.8rem;
     }
     
+}
+
+@media screen and (max-width: 1000px){
+    p {
+        text-align: center;
+    }
+    
+    .about{
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .abouttext{
+        align-items: center;
+        margin: 0;
+    }
+
+    .about img{
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    .skltext{
+        display: none;
+        visibility: hidden;
+    }
+
+    .skills{
+        display: flex;
+        visibility: visible;
+        flex-flow: column;
+        align-items: center;
+        margin-top: 25px;
+    }
+
 }
