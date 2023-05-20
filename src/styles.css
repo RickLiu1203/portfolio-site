@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,8 +6,15 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+h1{
+    font-size: 2.5rem;
+}
+html,body{
+    overflow-x: hidden;
+}
+
 p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 25px;
 }
 
@@ -94,7 +101,7 @@ button:active{
 }
 
 .button button{
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
     border-radius: 10rem;
 
 }
@@ -104,7 +111,7 @@ button:active{
 }
 
 .nav{
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-size: clamp(1.1rem, 2vw, 1.3em);
     padding-left: clamp(0.7rem, 1.5vw, 3rem);
 }
 
@@ -180,22 +187,23 @@ a:active{
 
 .about{
     display: flex;
-    padding-top: 25px;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .about img{
     width: 50%;
-    max-height: 400px;
+    max-height: 375px;
+    clip-path: circle();
 }
-
 
 .abouttext{
     display: flex;
     flex-flow: column;
     margin-right: 5%;
-    align-self: flex-start;
+    justify-self: flex-start;
+    max-width: 60%;
 }
 
 .skills{
@@ -203,9 +211,30 @@ a:active{
     visibility: hidden;
 }
 
+.abticons{
+    display: flex;
+    justify-content: space-between;
+    max-width: 20%;
 
+}
 
+.icon{
+    font-size: 40px;
+    padding: 0 20px 0 20px;
 
+}
+
+.icon:first-child{
+    padding-left: 0;
+}
+
+.icon:last-child{
+    padding-right: 0;
+}
+
+.about h2, .skills h2{
+    padding-top: 10px;
+}
 
 .portfolio{
     padding: 1000px;
@@ -237,6 +266,11 @@ a:active{
 @media screen and (max-width: 1000px){
     p {
         text-align: center;
+        font-size: 17px;
+    }
+
+    h1{
+        font-size: 2rem;
     }
     
     .about{
@@ -248,14 +282,15 @@ a:active{
     .abouttext{
         align-items: center;
         margin: 0;
+        max-width: 90%;
     }
 
     .about img{
-        width: 70%;
+        max-height: 300px;
         margin-top: 20px;
     }
 
-    .skltext{
+    .wide{
         display: none;
         visibility: hidden;
     }
@@ -267,5 +302,10 @@ a:active{
         align-items: center;
         margin-top: 25px;
     }
+
+    .abticons{
+        max-width: 100%;
+    }
+
 
 }
