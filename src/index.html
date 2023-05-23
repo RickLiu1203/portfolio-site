@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> 
     <title>Rick's Website</title>
 </head>
 <body>
@@ -24,16 +25,16 @@
             </nav>
     </div>
     <div class="page">
-
         <div class="intro">
             <h2>Hi, I'm Rick Liu </h2>
-            <p>Computer Engineering @UWaterloo</p>
-            <p>Software Developer</p>
+            <p class="greet">Computer Engineering @UWaterloo</p>
+            <p class="greet">Software Developer</p>
             <div class="socialbubs"> 
                 <button class="linkedin"><i class="fa-brands fa-linkedin"></i></button>
                 <button class="github"><i class="fa-brands fa-square-github"></i></button>
                 <button class="mail"><i class="fa-solid fa-square-envelope"></i></button>
             </div>
+            <button class="resume narrow">Resume <i class="fa-solid fa-file fa-fw"></i></button></li>
             <div class="explorenav">
                 <h3><a class="explore" href="#about">Explore My Website<br><i class="fa-solid fa-angle-down"></i></a></h3>
             </div>
@@ -45,42 +46,52 @@
                 <h2 class="text">I'm a really cool person</h2>
                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, repellendus fugiat accusantium ad nihil ipsam expedita aut, a rerum nemo rem possimus. Delectus beatae autem maiores explicabo aperiam exercitationem placeat! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero vitae quis laudantium a, minima perferendis iusto nihil deleniti? Nam cum eveniet fugit saepe dolor quos ex incidunt aliquam distinctio quibusdam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores dignissimos, ratione et necessitatibus praesentium odit adipisci cum perspiciatis animi nisi atque similique eligendi accusamus nihil autem, ex sint mollitia?</p> 
                 <h2 class="text wide">Skills</h2>
-                <div class="abticons wide">
-                    <h2 class="icon"><i class="fa-brands fa-python"></i></h2>
-                    <h2 class="icon"><i class="fa-brands fa-html5"></i></h2>
-                    <h2 class="icon"><i class="fa-brands fa-css3-alt"></i></h2>
-                    <h2 class="icon"><i class="fa-brands fa-square-js"></i></h2>
-                </div>
-                <h2 class="text wide">Currently Learning</h2>
-                <div class="abticons wide">
-                    <h2 class="icon"><i class="fa-brands fa-python"></i></h2>
-                    <h2 class="icon"><i class="fa-brands fa-html5"></i></h2>
-                    <h2 class="icon"><i class="fa-brands fa-css3-alt"></i></h2>
-                    <h2 class="icon"><i class="fa-brands fa-square-js"></i></h2>
-                </div>
+                <ul class="abticons wide">
+                    <li><i class="devicon-python-plain"></i></li>
+                    <li><i class="devicon-cplusplus-plain"></i></li>
+                    <li><i class="fa-brands fa-html5"></i></li>
+                    <li><i class="fa-brands fa-css3-alt"></i></li>
+                    <li><i class="fa-brands fa-square-js"></i></li>
+                </ul>
             </div>
             <img src="/imgs/graycat.jpg">
-        </div>
-        <div class="skills">
-            <h2 class="text">Skills</h2>
-            <div class="abticons">
-                <h2 class="icon"><i class="fa-brands fa-python"></i></h2>
-                <h2 class="icon"><i class="fa-brands fa-html5"></i></h2>
-                <h2 class="icon"><i class="fa-brands fa-css3-alt"></i></h2>
-                <h2 class="icon"><i class="fa-brands fa-square-js"></i></h2>
+
+            <div class="skills">
+                <h2 class="text">Skills</h2>
+                <ul class="abticons">
+                    <li><i class="devicon-python-plain"></i></li>
+                    <li><i class="devicon-cplusplus-plain"></i></li>
+                    <li><i class="fa-brands fa-html5"></i></li>
+                    <li><i class="fa-brands fa-css3-alt"></i></li>
+                    <li><i class="fa-brands fa-square-js"></i></li>
+                </ul>
             </div>
-            <h2 class="text">Currently Learning</h2>
-            <div class="abticons">
-                <h2 class="icon"><i class="fa-brands fa-python"></i></h2>
-                <h2 class="icon"><i class="fa-brands fa-html5"></i></h2>
-                <h2 class="icon"><i class="fa-brands fa-css3-alt"></i></h2>
-                <h2 class="icon"><i class="fa-brands fa-square-js"></i></h2>
-            </div>
-        </div>
+         </div>
 
         <div class="portfolio">
             <h1 class="text">Portfolio</h1>
+            <div class="grid">
+                <div class="panel highlight">
+
+                </div>
+                <div class="panel">
+
+                </div>
+                <div class="panel">
+
+                </div>
+                <div class="panel">
+
+                </div>
+                <div class="panel">
+
+                </div>
+                <div class="panel">
+
+                </div>
+            </div>
         </div>
+
         <div class="dashboard">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dicta dignissimos iusto, magnam temporibus minima architecto animi corporis numquam id alias nesciunt ratione omnis quisquam, quia quibusdam iste accusamus aliquid!
         </div>
@@ -88,5 +99,6 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque dolor id earum consequatur recusandae, iusto iste eaque vero perspiciatis quos, laboriosam sed. Quisquam commodi modi quia delectus minus ducimus beatae?
         </div>
     </div>
+    
 </body>
 </html>

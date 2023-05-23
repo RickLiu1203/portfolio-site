@@ -9,8 +9,13 @@
 h1{
     font-size: 2.5rem;
 }
+
 html,body{
     overflow-x: hidden;
+}
+
+h2{
+    font-size: 1.6rem;
 }
 
 p {
@@ -19,20 +24,20 @@ p {
 }
 
 .text{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .page{
     display: flex;
     flex-flow: column;
-    padding: 0 3rem 0 3rem;
+    padding: 0 clamp(1rem,6vw,10rem);
 }
 
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem;
+    padding: 2rem 4rem;
 }
 
 .underline {
@@ -76,6 +81,8 @@ a{
 }
 
 button{
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    border-radius: 10rem;
     border: 3px solid black;
     background-color: transparent;
     transition: background-color 0.2s ease-out;
@@ -98,12 +105,6 @@ button:active{
     display: flex;
     list-style-type: none;
     align-items: center;
-}
-
-.button button{
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
-    border-radius: 10rem;
-
 }
 
 .title{
@@ -134,14 +135,19 @@ button:active{
     justify-content: center;
     align-items: center;
     height: calc(80vh - 105px);
-    margin-bottom: 275px;
+    margin-bottom: 300px;
+}
+
+.intro .resume{
+    display: none;
+    visibility: hidden;
 }
 
 .socialbubs{
     padding-top: 10px;
 }
 
-.intro button{
+.socialbubs button{
     font-size: 25px;
     border-radius: 50%;
     height: 50px;
@@ -188,20 +194,19 @@ a:active{
 .about{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+    justify-content: space-between;   
+    padding-bottom: 125px;
 }
 
 .about img{
-    width: 50%;
-    max-height: 375px;
+    max-width: 350px;
     clip-path: circle();
 }
 
 .abouttext{
     display: flex;
     flex-flow: column;
-    margin-right: 5%;
+    margin-right: 50px;
     justify-self: flex-start;
     max-width: 60%;
 }
@@ -215,64 +220,76 @@ a:active{
     display: flex;
     justify-content: space-between;
     max-width: 20%;
+    list-style-type: none;
 
 }
 
-.icon{
+.abticons li{
+    display: flex;
+    justify-content: center;
     font-size: 40px;
-    padding: 0 20px 0 20px;
-
+    margin: 0 20px;
+    width: 40px;
 }
 
-.icon:first-child{
-    padding-left: 0;
+.abticons li:first-child{
+    margin-left: 0;
 }
 
-.icon:last-child{
-    padding-right: 0;
-}
-
-.about h2, .skills h2{
+ .skills h2{
     padding-top: 10px;
 }
 
 .portfolio{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.panel{
+    width: 125px;
+    height: 500px;
+    border: transparent;
+    border-radius: 60px;
+    box-shadow: 0px 0px 7px rgb(155, 155, 155);
+    margin: 0 7px 2% 7px;
+
+}
+
+.highlight{
+    margin-left: 4px;
+    width: 500px;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: no-wrap;
+    max-width: 100%;
+    padding-top: 15px;
+    justify-content: center;
+}
+
+
+.dashboard{
     padding: 1000px;
 }
 
-
-@media screen and (max-width: 700px) {
-    li:not(.button){
-        display: none;
-        visibility: hidden;
-    }
-    .resume{
-        display: none;
-        visibility: hidden;
-    }
-    .nav:last-child{
-        display: inline;
-        visibility: visible;
-    }
-    .navbar{
-        justify-content: space-between;
-    }
-    .button button{
-        padding: 0.5rem 0.8rem;
-    }
-    
-}
-
 @media screen and (max-width: 1000px){
-    p {
-        text-align: center;
-        font-size: 17px;
-    }
-
-    h1{
-        font-size: 2rem;
+    .navbar{
+        padding: 2rem 3.5rem;
     }
     
+    .page{
+        padding: 0 3.5rem;
+    }
+    
+    h1{
+        font-size: 2.5rem;
+    }
+    
+    p{
+        text-align: center;
+    }
     .about{
         flex-flow: column;
         align-items: center;
@@ -282,11 +299,11 @@ a:active{
     .abouttext{
         align-items: center;
         margin: 0;
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .about img{
-        max-height: 300px;
+        max-height: 250px;
         margin-top: 20px;
     }
 
@@ -305,7 +322,78 @@ a:active{
 
     .abticons{
         max-width: 100%;
+        justify-content: center;
     }
 
+    .abticons li:last-child{
+        margin-right: 0;
+    }
 
+    .portfolio{
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .grid{
+        flex-flow: wrap;
+        width: 100%;
+    }
+
+    .panel{
+        width: 47%;
+        height: 450px;
+        border-radius: 50px;
+        margin-bottom: 2%;
+        box-shadow: 0 0 5px rgb(155, 155, 155);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    p:not(.greet){
+        font-size: 18px;
+    }
+
+    .navicons li:not(.button){
+        display: none;
+        visibility: hidden;
+    }
+    .resume:not(.narrow){
+        display: none;
+        visibility: hidden;
+    }
+    .nav:last-child{
+        display: inline;
+        visibility: visible;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+    .button button{
+        padding: 0.5rem 0.8rem;
+    }
+
+    .intro .resume{
+        display: block;
+        visibility: visible;
+        margin-top: 15px;
+        font-size: 22px;
+    }
+
+    .grid{
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .panel{
+        width: 425px;
+        height: 80px;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 5px rgb(155, 155, 155);
+    }
+
+    .highlight{
+        height: 400px;
+    }
+    
 }
